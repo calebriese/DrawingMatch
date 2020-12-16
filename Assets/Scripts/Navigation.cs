@@ -27,4 +27,13 @@ public class Navigation : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PlayerOne()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void PlayerTwo()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

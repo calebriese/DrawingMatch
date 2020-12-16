@@ -547,52 +547,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289473867}
   m_CullTransparentMesh: 0
---- !u!1 &334426060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 334426062}
-  - component: {fileID: 334426061}
-  m_Layer: 0
-  m_Name: PhaseTwoScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &334426061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334426060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b7c8a639606d0408e349b982b0356d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 10
-  timerIsRunning: 0
-  timeText: {fileID: 0}
---- !u!4 &334426062
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334426060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 436.66827, y: 314.26468, z: -4890.748}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650824972
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +559,7 @@ GameObject:
   - component: {fileID: 650824976}
   - component: {fileID: 650824975}
   - component: {fileID: 650824974}
+  - component: {fileID: 650824977}
   m_Layer: 5
   m_Name: NextPhase Button
   m_TagString: Untagged
@@ -675,7 +630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 334426061}
+      - m_Target: {fileID: 650824977}
         m_MethodName: NextPhase
         m_Mode: 1
         m_Arguments:
@@ -723,6 +678,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650824972}
   m_CullTransparentMesh: 0
+--- !u!114 &650824977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650824972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257eea0eb9d7a58409c5656f2addbdea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674135860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +975,7 @@ GameObject:
   - component: {fileID: 1134304765}
   - component: {fileID: 1134304764}
   - component: {fileID: 1134304763}
+  - component: {fileID: 1134304766}
   m_Layer: 5
   m_Name: EndGame Button
   m_TagString: Untagged
@@ -1078,7 +1046,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 334426061}
+      - m_Target: {fileID: 1134304766}
         m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
@@ -1126,6 +1094,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134304761}
   m_CullTransparentMesh: 0
+--- !u!114 &1134304766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134304761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257eea0eb9d7a58409c5656f2addbdea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1189634027
 GameObject:
   m_ObjectHideFlags: 0
