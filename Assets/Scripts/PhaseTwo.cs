@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class PhaseTwo : MonoBehaviour
 {
-    public void ButtonStart()
+    public void NextPhase()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
     }
 
     public void EndGame()
@@ -15,8 +15,4 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
-    public void Exit()
-    {
-        Application.Quit();
-    }
 }
