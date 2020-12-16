@@ -69,5 +69,6 @@ crashlytics-build.properties
 InitTestScene*.unity.meta
 InitTestScene*.unity
 
+Thumbs.db
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
