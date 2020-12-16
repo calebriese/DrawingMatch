@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PhaseTwo : MonoBehaviour
@@ -15,4 +16,5 @@ public class PhaseTwo : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
+    
 }
