@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 109069208}
   - component: {fileID: 109069207}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: randomImageObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b747af2b5ca6014e8e4d2d333e07076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  images: []
+  newImage: {fileID: 0}
   image1: {fileID: 2830707094351886447, guid: 229ce7398cfc18a4fa1bc50552b73cd0, type: 3}
   image2: {fileID: 2625796174180223119, guid: 5671778fac3dff247aed563cf1ec5502, type: 3}
   image3: {fileID: 2885365587001788699, guid: 72129c8af12806342be87e16f1481348, type: 3}
@@ -308,6 +310,7 @@ MonoBehaviour:
   image7: {fileID: 3039281093636106687, guid: 8d3e4dbdfcbd7c74c8995bf9d8456c4f, type: 3}
   image8: {fileID: 6414157744050291874, guid: d5afc401282a91b4dbcd693ecf230841, type: 3}
   image9: {fileID: 5825715430612892580, guid: 29fd3628d0a03b04788cd792b6eb20ee, type: 3}
+  rando: 0
 --- !u!4 &109069208
 Transform:
   m_ObjectHideFlags: 0
