@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
+
 
 public class PlayerBrush : NetworkBehaviour
 {
@@ -51,6 +53,7 @@ public class PlayerBrush : NetworkBehaviour
                 }
             }
         }
+        UpdateText(textHolder);
     }
     
     [Command]
@@ -77,5 +80,48 @@ public class PlayerBrush : NetworkBehaviour
         }
 
         PaintCanvas.Texture.Apply();
+    }
+
+
+
+
+
+    public string theText;
+    public GameObject inputfield;
+    public Text UIText;
+    public string textHolder;
+
+    public void TextEnter()
+    {
+        const int MAX_Len = 21;
+        string theText = string.Empty;
+        theText = inputfield.GetComponent<Text>().text;
+        if (theText.Length > MAX_Len)
+            theText = theText.Substring(0, MAX_Len - 1);
+
+        textHolder = theText;
+        CmdTextOnServer(theText);
+        UpdateText(theText);
+    }
+
+
+    [Command]
+    public void CmdTextOnServer(string text)
+    {
+        textHolder = text;
+        RpcTextOnClients(text);
+        UpdateText(text);
+    }
+
+    [ClientRpc]
+    private void RpcTextOnClients(string text)
+    {
+        textHolder = text;
+        UpdateText(text);
+    }
+
+    private void UpdateText(string text)
+    {
+        UIText.text = "Player 2 said: " + text;
     }
 }
