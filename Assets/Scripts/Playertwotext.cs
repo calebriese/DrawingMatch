@@ -10,17 +10,9 @@ public class Playertwotext : MonoBehaviour
     public GameObject inputfield;
     public GameObject textDisplay;
 
-    public Text UIText;
-
     public class Message : MessageBase
     {
         public string theMessage;
-    }
-
-    void Update()
-    {
-        DisplayTextOnServer();
-        ChangeTextBox("Bob");
     }
 
     public void TextEnter()
@@ -35,23 +27,5 @@ public class Playertwotext : MonoBehaviour
         Message myMessage = new Message();
         myMessage.theMessage = "Player 2 said: " + theText;
         NetworkServer.SendToAll( 6969 , myMessage);
-    }
-
-    [Command]
-    private void DisplayTextOnServer()
-    {
-        SendTextServer();
-        ChangeTextBox("Server Text");
-    }
-
-    [ClientRpc]
-    public void SendTextServer()
-    {
-        ChangeTextBox("Maybe Server Text");
-    }
-
-    private void ChangeTextBox(string text)
-    {
-        UIText.text = text;
     }
 }
